@@ -1071,6 +1071,22 @@ main .bucket .code .resultCode {
   transition: all .1s ease-out;
 }
 
+.dashboard .dashboard-sidebar.open ::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+.dashboard .dashboard-sidebar.open :-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.dashboard .dashboard-sidebar.open ::-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.dashboard .dashboard-sidebar.open ::placeholder {
+  color: #FFFFFF;
+}
+
 .dashboard .dashboard-sidebar.open input:focus {
   color: #FFFFFF;
   background: #00aaa9;

@@ -257,6 +257,12 @@
             padding: 0 20px 0 50px;
             width: 100%;
             transition: all .1s ease-out;
+
+
+        }
+
+        ::placeholder {
+            color: $color-w;
         }
 
         input:focus {
