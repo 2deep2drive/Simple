@@ -264,7 +264,9 @@
             color: $color-w;
             background: $db-sidebar-2;
         }
-
+        ::placeholder {
+            color: $color-w;
+        }
         .bx-search:hover {
 
             color: $color-w;
