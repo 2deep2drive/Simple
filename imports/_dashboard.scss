@@ -1,0 +1,452 @@
+.dashboard {
+    display: flex;
+
+    .dashboard-sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: $aside-closed-w;
+        background: $db-sidebar-1;
+        padding: 6px 14px;
+        z-index: 99;
+        transition: all 0.5s ease;
+        color: $color-w;
+
+        .logo-details {
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            .icon {
+                opacity: 0;
+                transition: all 0.5s ease;
+            }
+
+            .logo_name {
+                color: $color-w;
+                font-size: $db-i-font-5;
+                font-family: "Poppins", sans-serif;
+                font-weight: 600;
+                opacity: 0;
+                transition: all 0.5s ease;
+                padding-left: .5rem;
+            }
+
+            #btn {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                font-size: $db-i-font-2;
+                transition: all 0.4s ease;
+                font-size: 1.75rem;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.5s ease;
+            }
+        }
+
+        .nav-list {
+            margin-top: 3rem;
+            height: 100%;
+
+            li {
+                position: relative;
+                margin: .5rem 0;
+                list-style: none;
+
+                a {
+                    display: flex;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: .75rem;
+                    align-items: center;
+                    text-decoration: none;
+                    transition: all 0.4s ease;
+                    background: $db-sidebar-2;
+
+                    .links_name {
+                        color: $color-w;
+                        font-size: 15px;
+                        font-weight: 400;
+                        white-space: nowrap;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: 0.5s;
+                    }
+
+                    &:hover {
+                        background: $color-w;
+
+                        .links_name,
+                        i {
+                            color: $db-sidebar-2;
+                            transition: all 0.5s ease;
+                        }
+                    }
+                }
+
+                i {
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: $db-i-font-2;
+                    border-radius: .75rem;
+                }
+
+                .tooltip {
+                    position: absolute;
+                    top: -1.25rem;
+                    left: calc(100% + 1rem);
+                    z-index: 3;
+                    background: $db-sidebar-1;
+                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+                    padding: .5rem 1rem;
+                    border-radius: .25rem;
+                    font-size: 15px;
+                    font-weight: 400;
+                    opacity: 0;
+                    white-space: nowrap;
+                    pointer-events: none;
+                    transition: 0s;
+                }
+
+                .profile-details {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                }
+
+                img {
+                    height: 45px;
+                    width: 45px;
+                    object-fit: cover;
+                    border-radius: 6px;
+                    margin-right: 10px;
+                }
+
+                &:hover {
+                    .tooltip {
+                        color: $color-w;
+                        opacity: 1;
+                        pointer-events: auto;
+                        transition: all 0.4s ease;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+            }
+
+            li.profile {
+                position: fixed;
+                height: 60px;
+                width: $aside-closed-w;
+                left: 0;
+                bottom: -8px;
+                padding: 10px 14px;
+                transition: all 0.5s ease;
+                overflow: hidden;
+
+                .name,
+                .job {
+                    font-size: 15px;
+                    font-weight: 400;
+                    color: $color-w;
+                    white-space: nowrap;
+                }
+
+                .job {
+                    font-size: 12px;
+                }
+            }
+
+            .profile #log_out {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                background: $db-sidebar-2;
+                width: 100%;
+                height: 60px;
+                line-height: 60px;
+                border-radius: 0px;
+                transition: all 0.5s ease;
+            }
+        }
+
+        input {
+            font-size: 15px;
+            color: $color-w;
+            font-weight: 400;
+            outline: none;
+            height: 50px;
+            width: 100%;
+            width: 50px;
+            border: none;
+            border-radius: 12px;
+            transition: all 1.02s ease;
+            background: $db-sidebar-2;
+        }
+
+        .bx-search {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            font-size: 22px;
+            background: $db-sidebar-2;
+            color: $color-w;
+
+            &:hover {
+                background: $color-w;
+                color: $db-sidebar-2;
+            }
+        }
+
+        i {
+            color: $color-w;
+            height: 60px;
+            min-width: 50px;
+            font-size: 54px;
+            text-align: center;
+            line-height: 60px;
+        }
+    }
+
+    .dashboard-sidebar.open {
+        width: $aside-w;
+
+        .logo-details {
+
+            .icon,
+            .logo_name {
+                opacity: 1;
+            }
+
+            #btn {
+                text-align: right;
+            }
+        }
+
+        .nav-list {
+            li {
+                .tooltip {
+                    display: none;
+                }
+
+                a .links_name {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+            }
+
+            li.profile {
+                width: $aside-w;
+                background: $db-sidebar-2;
+            }
+
+            .profile #log_out {
+                width: 50px;
+                background: none;
+            }
+        }
+
+        input {
+            padding: 0 20px 0 50px;
+            width: 100%;
+            transition: all .1s ease-out;
+        }
+
+        ::placeholder {
+            color: $color-w;
+        }
+
+        input:focus {
+
+            color: $color-w;
+            background: $db-sidebar-2;
+        }
+        ::placeholder {
+            color: $color-w;
+        }
+        .bx-search:hover {
+
+            color: $color-w;
+            background: $db-sidebar-2;
+        }
+    }
+
+
+    .dashboard-section {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: 100vh;
+        left: $aside-closed-w;
+        width: calc(#{$full-w} - #{$aside-closed-w});
+        transition: all 0.5s ease;
+        z-index: 2;
+
+        header {
+            left: $aside-closed-w;
+            width: calc(#{$full-w} - #{$aside-closed-w});
+            background: $db-sidebar-1;
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+            .db-nav {
+                padding-left: 11rem;
+                display: flex;
+                justify-content: flex-end;
+
+                .nav-chat,
+                .nav-notification,
+                .nav-auth-links {
+                    ul {
+                        list-style: none;
+                        display: flex;
+                        height: $nav-h;
+
+                        li {
+                            a {
+                                padding: .75rem;
+                                border-radius: .5rem;
+                                display: inline-block;
+                                margin: 1.5rem 1.5rem 1rem;
+                                border: none;
+                                color: $color-w;
+                                display: flex;
+                                align-items: center;
+                                font-size: $db-i-font-2;
+                                background: #00e6e23a;
+
+                                &:hover {
+                                    transition: 300ms ease-in-out;
+                                    background: $color-w;
+                                    color: $app-accent-2;
+
+                                }
+                            }
+                        }
+
+
+                        .dd {
+                            position: relative;
+                            display: inline-block;
+                        }
+
+                        .dd-cnt {
+                            display: none;
+                            position: absolute;
+                            right: 2%;
+                            padding: .5rem;
+                            border-radius: .5rem;
+                            min-height: 12rem;
+                            min-width: 10rem;
+                            z-index: 99;
+                            background: $color-w;
+                            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                height: inherit;
+
+                                li {
+                                    display: flex;
+                                    height: 2.5rem;
+                                    border-radius: .5rem;
+
+                                    .icon {
+                                        width: 25%;
+                                        float: left;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        i {
+
+                                            background: transparent;
+                                            height: inherit;
+                                            border-radius: 0rem;
+                                        }
+                                    }
+
+                                    .link {
+                                        height: inherit;
+                                        width: 75%;
+
+                                        a {
+                                            color: $text-color-2;
+                                            margin: 0rem;
+                                            height: inherit;
+                                            width: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            padding: 0 .5rem;
+                                            font-size: .9rem;
+                                            font-weight: 500;
+                                            background: transparent;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        background: $sidebar-txt-hover;
+
+                                        .icon {
+                                            i {
+                                                color: $text-hover-color;
+                                            }
+                                        }
+
+                                        .link {
+                                            a {
+                                                transition: .1s;
+                                                background: transparent;
+                                                color: $text-hover-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .dd:hover .dd-cnt {
+                            display: block;
+                        }
+
+                        .dd:hover .dd-btn {
+                            background: $color-w;
+                            color: $app-accent-2;
+                        }
+
+                        // i {
+                        //     height: 40px;
+                        //     width: 40px;
+                        //     line-height: 50px;
+                        //     font-size: $db-i-font-2;
+                        //     border-radius: .75rem;
+                        //     background: #00e6e228;
+                        //     display: flex;
+                        //     justify-content: center;
+                        //     align-items: center;
+                        // }
+                    }
+                }
+
+
+            }
+
+        }
+
+        main {
+            padding-top: $header-h;
+        }
+    }
+
+    .dashboard-sidebar.open~.dashboard-section {
+        left: $aside-w;
+        width: calc(#{$full-w} - #{$aside-w});
+    }
+}
