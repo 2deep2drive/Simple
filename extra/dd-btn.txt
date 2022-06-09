@@ -1,0 +1,234 @@
+.dd-btn {
+    // background-color: #04AA6D;
+    // color: white;
+    // padding: 16px;
+    // font-size: 16px;
+    // border: none;
+}
+
+.dd {
+    position: relative;
+    display: inline-block;
+}
+
+.dd-cnt {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dd-cnt a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dd-cnt a:hover {
+    background-color: #ddd;
+}
+
+.dd:hover .dd-cnt {
+    display: block;
+}
+
+.dd:hover .dd-btn {
+    background-color: #3e8e41;
+}
+
+// ------
+.app-nav-simple {
+
+    .nav-auth-links {
+        li {
+            a {
+                padding: .25rem 1rem;
+                border-radius: .5rem;
+            }
+
+            a:hover {
+                transition: 300ms ease-in-out;
+                background: $color-w;
+                color: $app-accent-2;
+            }
+        }
+
+
+    }
+}
+
+
+// -------------------------
+.app-nav-m {
+
+    .nav-base-links,
+    .nav-auth-links {
+
+        li {
+            a {
+                padding: .25rem 1rem;
+                border-radius: .5rem;
+            }
+
+            a:hover {
+                transition: 300ms ease-in-out;
+                background: $color-w;
+                color: $app-accent-2;
+            }
+        }
+
+        .dd-btn {
+            // background-color: #04AA6D;
+            // color: white;
+            // padding: 16px;
+            // font-size: 16px;
+            // border: none;
+        }
+
+        .dd {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dd-cnt {
+            display: none;
+            position: absolute;
+            // top: 5.2rem;
+            // right: 2rem;
+            right: 2%;
+            padding: .5rem;
+            border-radius: .5rem;
+            // opacity: 0;
+            // white-space: nowrap;
+            // pointer-events: none;
+            // transition: 0s;
+            min-height: 12rem;
+            min-width: 10rem;
+            z-index: 99;
+            background: $color-w;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                height: inherit;
+
+                li {
+                    display: flex;
+                    height: 2.5rem;
+
+                    .icon {
+                        height: inherit;
+                        width: 25%;
+                        float: left;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        i {
+                            background: transparent;
+                            height: inherit;
+                            border-radius: 0rem;
+                        }
+                    }
+
+                    .link {
+                        height: inherit;
+                        width: 75%;
+
+                        a {
+                            color: $text-color-2;
+                            margin: 0rem;
+                            height: inherit;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            padding: 0 .5rem;
+                            font-size: .9rem;
+                            font-weight: 500;
+                        }
+                    }
+
+                    // &:hover {
+                    //     background: $sidebar-txt-hover;
+
+                    //     .icon {
+                    //         i {
+                    //             color: $text-hover-color;
+                    //         }
+                    //     }
+
+                    //     .link {
+                    //         a {
+                    //             color: $text-hover-color;
+                    //         }
+                    //     }
+                    // }
+                }
+            }
+        }
+
+        .dd-cnt a:hover {
+            background-color: #ddd;
+        }
+
+        .dd:hover .dd-cnt {
+            display: block;
+        }
+
+        .dd:hover .dd-btn {
+            background-color: #3e8e41;
+        }
+    }
+
+
+}
+//--------
+ <ul class="center">
+<li class="dd">
+<a href="#0" class="dd-btn">
+  Log In
+</a>
+<div class="dd-cnt">
+  <ul>
+    <li>
+      <div class="link">
+        <a href="" class="">spit</a>
+      </div>
+    </li>
+    <li>
+      <div class="link">
+        <a href="" class="">Profile</a>
+      </div>
+    </li>
+    <li>
+      <div class="link">
+        <a href="" class="">hospitality</a>
+      </div>
+    </li>
+    <li>
+      <div class="link">
+        <a href="" class="">broadcast</a>
+      </div>
+    </li>
+    <li>
+      <div class="link">
+        <a href="" class="">tenant</a>
+      </div>
+    </li>
+
+  </ul>
+
+</div>
+</li>
+</ul>
+//------
+<!-- <ul class="start">
+<li class="">
+<a href="#nav" class="">v1.0</a>
+
+</li>
+</ul> -->

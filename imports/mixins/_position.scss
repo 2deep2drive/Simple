@@ -1,0 +1,10 @@
+@mixin position($var) {
+    
+    .#{$var} {
+        position: $var !important;
+    }
+}
+
+@include position(fixed);
+@include position(relative);
+@include position(sticky);

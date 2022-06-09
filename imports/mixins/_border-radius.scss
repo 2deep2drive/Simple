@@ -1,0 +1,98 @@
+//----- border-radius-all
+@mixin border-radius($value) {
+    border-radius: $value !important;
+}
+
+//----- border-radius-left
+@mixin border-radius-left($value) {
+    border-top-left-radius: $value;
+    border-bottom-left-radius: $value;
+}
+
+//----- border-radius-right
+@mixin border-radius-right($value) {
+    border-top-right-radius: $value;
+    border-bottom-right-radius: $value;
+}
+
+//----- border-radius-top-left
+@mixin border-radius-top-left($value) {
+    border-top-left-radius: $value;
+}
+
+//----- border-radius-top-right
+@mixin border-radius-top-right($value) {
+    border-top-right-radius: $value;
+}
+
+//----- border-radius-bottom-left
+@mixin border-radius-bottom-left($value) {
+    border-bottom-left-radius: $value;
+}
+
+//----- border-radius-bottom-right
+@mixin border-radius-bottom-right($value) {
+    border-bottom-right-radius: $value;
+}
+
+//----- border-radius-map
+$br-all-value:(box:0rem, curve:.35rem, circle:50rem);
+
+$br-value:(box:0rem, curve:.35rem);
+
+//----- loops -----//
+//----- all
+@each $key,
+$value in $br-all-value {
+    .br-#{$key} {
+        @include border-radius($value);
+    }
+}
+
+//-----left
+@each $key,
+$value in $br-value {
+    .br-l-#{$key} {
+        @include border-radius-left($value);
+    }
+}
+
+//-----right
+@each $key,
+$value in $br-value {
+    .br-r-#{$key} {
+        @include border-radius-right($value);
+    }
+}
+
+//----- top-left
+@each $key,
+$value in $br-value {
+    .br-t-l-#{$key} {
+        @include border-radius-top-left($value);
+    }
+}
+
+//----- top-right
+@each $key,
+$value in $br-value {
+    .br-t-r-#{$key} {
+        @include border-radius-top-right($value);
+    }
+}
+
+//----- bottom-left
+@each $key,
+$value in $br-value {
+    .br-b-l-#{$key} {
+        @include border-radius-bottom-left($value);
+    }
+}
+
+//----- bottom-right
+@each $key,
+$value in $br-value {
+    .br-b-r-#{$key} {
+        @include border-radius-bottom-right($value);
+    }
+}

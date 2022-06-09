@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <link rel="stylesheet" href="simple.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+</head>
+
+<body class="dashboard">
+  <aside class="dashboard-sidebar">
+    <div class="logo-details">
+      <!-- <i class='bx bx-cool icon'></i> -->
+      <div class="logo_name">Simple</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <i class="bx bx-search"></i>
+        <input type="text" placeholder="Search..." />
+        <span class="tooltip">Search</span>
+      </li>
+      <!--  -->
+      <li>
+        <a href="#">
+          <i class="bx bx-grid-alt"></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <!--  -->
+      <li>
+        <a href="#">
+          <i class="bx bx-calendar"></i>
+          <span class="links_name">Calender</span>
+        </a>
+        <span class="tooltip">Calender</span>
+      </li>
+      <!--  -->
+      <li>
+        <a href="#">
+          <i class="bx bx-pie-chart-alt-2"></i>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <!--  -->
+      <li>
+        <a href="#">
+          <i class="bx bx-notepad"></i>
+          <span class="links_name">Projects</span>
+        </a>
+        <span class="tooltip">Projects</span>
+      </li>
+      <!--  -->
+      <li>
+        <a href="#">
+          <i class="bx bx-wallet-alt"></i>
+          <span class="links_name">Wallet</span>
+        </a>
+        <span class="tooltip">Wallet</span>
+      </li>
+      <!--  -->
+      <li>
+        <a href="#">
+          <i class="bx bx-chat"></i>
+          <span class="links_name">Messages</span>
+        </a>
+        <span class="tooltip">Messages</span>
+      </li>
+      <!--  -->
+      <li>
+        <a href="#">
+          <i class="bx bx-folder"></i>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+      <!--  -->
+      <li>
+        <a href="#">
+          <i class="bx bx-cart-alt"></i>
+          <span class="links_name">Order</span>
+        </a>
+        <span class="tooltip">Order</span>
+      </li>
+      <!--  -->
+      <li>
+        <a href="#">
+          <i class="bx bx-user"></i>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      <!--  -->
+      <li>
+        <a href="#">
+          <i class="bx bx-heart"></i>
+          <span class="links_name">Saved</span>
+        </a>
+        <span class="tooltip">Saved</span>
+      </li>
+      <!--  -->
+      <li>
+        <a href="#">
+          <i class="bx bx-cog"></i>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+      <!--  -->
+      <li class="profile">
+        <div class="profile-details">
+          <img src="https://www.fillmurray.com/640/360" alt="profileImg" />
+          <div class="name_job">
+            <div class="name">John Doe</div>
+            <div class="job">Web designer</div>
+          </div>
+        </div>
+        <i class="bx bx-log-out" id="log_out"></i>
+      </li>
+    </ul>
+  </aside>
+  <section class="dashboard-section">
+    <header class="fixed">
+      <nav class="db-nav">
+        <!-- <div class=" nav-search d-esm-none d-sm-none ">
+          input
+        </div> -->
+
+        <div class="nav-chat c-esm-6 c-sm-5 c-md-4 c-lg-3 c-xl-1">
+          <ul class="center">
+            <li>
+              <a href="#0">
+                <i class="bx bx-message-rounded-dots"></i>
+              </a>
+            </li>
+
+            <li></li>
+          </ul>
+        </div>
+        <div class="nav-notification c-esm-6 c-sm-5 c-md-4 c-lg-3 c-xl-1">
+          <ul class="center">
+            <li>
+              <a href="#0">
+                <i class="bx bx-bell"></i>
+              </a>
+            </li>
+
+            <li></li>
+          </ul>
+        </div>
+
+        <div class="nav-auth-links c-esm-6 c-sm-5 c-md-4 c-lg-3 c-xl-2">
+          <ul class="start">
+            <li class="dd">
+              <a href="#0" class="dd-btn">
+                <i class="bx bx-user"></i>
+              </a>
+              <div class="menu dd-cnt">
+                <ul class="">
+                  <li class="">
+                    <div class="icon">
+                      <i class="bx bx-user"></i>
+                    </div>
+                    <div class="link">
+                      <a href="" class="">Profile</a>
+                    </div>
+                  </li>
+                  <li class="">
+                    <div class="icon">
+                      <i class="bx bx-heart"></i>
+                    </div>
+                    <div class="link">
+                      <a href="" class="">Saved</a>
+                    </div>
+                  </li>
+                  <li class="">
+                    <div class="icon">
+                      <i class="bx bx-cog"></i>
+                    </div>
+                    <div class="link">
+                      <a href="" class="">Settings</a>
+                    </div>
+                  </li>
+                  <li class="">
+                    <div class="icon">
+                      <i class="bx bx-notepad"></i>
+                    </div>
+                    <div class="link">
+                      <a href="" class="">Activity Log</a>
+                    </div>
+                  </li>
+                  <li class="">
+                    <div class="icon">
+                      <i class="bx bx-log-out"></i>
+                    </div>
+                    <div class="link">
+                      <a href="" class="">Log out</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="">
+      <div class="wrapper-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+        doloribus sint ut quisquam corporis velit dolore sit sequi quae id
+        aperiam blanditiis aliquam nesciunt optio reprehenderit explicabo
+        ipsum, unde ea. Ea aliquid sint alias natus vitae laudantium
+        consectetur fugiat explicabo voluptatem enim unde saepe, ut animi
+        incidunt harum labore velit, vel ratione culpa sunt corporis minima
+        eos ullam dolorem? Natus. Vel ad ratione facere. Odio aliquid
+        laudantium eius obcaecati, consectetur minus quis cum nihil, inventore
+        illum rerum? Temporibus fugit quaerat repellendus ratione odio magnam
+        veniam, quos ad et ducimus! Itaque. Facere repellendus odit neque? Ad,
+        autem. Molestiae porro tempora debitis quae soluta odio laudantium qui
+        enim aliquam vel? Repellat ducimus quasi minus dolorem delectus
+        accusamus est corrupti labore perspiciatis quod? Neque ipsum, suscipit
+        eum nisi vitae beatae! Cupiditate cumque amet aspernatur quasi error
+        totam iste ex quo a porro, sint corporis temporibus laudantium
+        doloremque unde quibusdam officia repellendus saepe delectus. Illo
+        odio veritatis impedit tenetur ipsum. Commodi debitis repellat
+        quibusdam? Expedita laborum sapiente repudiandae maxime reiciendis
+        esse dolor error! Ab, asperiores error. Enim soluta, ut impedit
+        dolorem laboriosam consequatur veniam? Inventore quia dolorum, in
+        eveniet, temporibus eligendi suscipit, similique quos praesentium
+        soluta excepturi. Non error quam laudantium ad delectus. Nesciunt
+        reprehenderit, minus doloribus hic iste amet itaque voluptate
+        temporibus voluptatibus. Doloremque ducimus soluta fuga omnis enim
+        quibusdam sequi amet, hic voluptas illo fugiat? Cupiditate iste ipsam
+        repudiandae at rerum consectetur reiciendis, natus et, vel quae cumque
+        quaerat. Deleniti, saepe nisi. Reprehenderit quam odio harum nemo
+        voluptatibus laudantium dignissimos ipsum officia, aspernatur debitis,
+        praesentium fuga! Voluptas officia velit sit ab fugiat dolorum,
+        excepturi culpa distinctio sed minus provident aliquid alias corporis?
+        Autem excepturi et neque illo officia nulla, sequi, doloribus deserunt
+        magnam quos, similique eum laborum. Molestiae, saepe voluptas
+        excepturi dolor accusamus facilis placeat eaque reprehenderit,
+        necessitatibus obcaecati blanditiis quasi earum! Reprehenderit
+        voluptatum optio, necessitatibus expedita unde ipsum quo tempore
+        perferendis et distinctio? Eligendi, sint possimus aliquam veritatis,
+        incidunt est iure atque distinctio eum unde animi repudiandae tempora
+        vero dignissimos deserunt. Molestiae voluptate soluta illo, commodi
+        libero deleniti omnis voluptatibus debitis doloremque quas
+        reprehenderit dicta architecto, distinctio voluptatum, dolor
+        cupiditate nobis aliquid sequi. Consequatur cum quae, voluptatum animi
+        quod suscipit maxime? Impedit excepturi optio reprehenderit, fugit
+        dolorum similique facere earum assumenda dignissimos! Eos corporis,
+        inventore repellendus, pariatur a animi nisi cupiditate harum, maiores
+        dicta commodi ad amet reprehenderit. Necessitatibus, optio libero?
+        Eaque, facere hic! Ex perferendis commodi iusto inventore minima ipsa.
+        Alias reiciendis aspernatur quae praesentium, distinctio amet
+        voluptatibus, modi pariatur unde similique sunt error voluptatem eum,
+        eligendi dolores iusto enim. Impedit, esse id dolore ab fuga ex hic
+        necessitatibus, dignissimos quos facilis vitae accusamus beatae
+        mollitia cupiditate quae. Quisquam repudiandae eaque autem molestias
+        pariatur tenetur placeat mollitia repellat, tempore esse! Soluta earum
+        omnis autem ad? Beatae repudiandae libero exercitationem nobis ex sint
+        veniam dolor ipsum vitae repellat eius, illo eveniet eaque aliquam ad
+        veritatis itaque quam? Dicta at quae eum? Ullam quas iure veritatis?
+        Voluptatem, nihil et aliquid voluptate necessitatibus quidem illum
+        reprehenderit exercitationem, iusto ad laborum in distinctio. Nisi
+        quo, quos voluptates ipsum enim corporis molestiae magni excepturi
+        soluta. Laboriosam, ad est facere repellat minus dolorum qui nesciunt
+        tempora reprehenderit ab nulla, veritatis atque quam et autem harum
+        rerum neque sequi nostrum recusandae deleniti aliquam. Cupiditate
+        saepe ullam officiis? Laboriosam voluptate iusto veniam possimus
+        debitis cumque modi sapiente corrupti magni dolores porro ad vero
+        neque cum perferendis exercitationem nemo, fuga suscipit minus.
+        Tempore reiciendis quae, sapiente animi rerum deserunt! Repudiandae
+        tempora nemo magni nisi. Rem placeat asperiores soluta quidem nam, et,
+        voluptates aliquam itaque voluptatum at deleniti reiciendis nobis,
+        mollitia amet eveniet aliquid iusto cumque ex dolor labore quae. Atque
+        ipsam quod, inventore blanditiis natus, hic expedita illum minima
+        nobis assumenda odit asperiores pariatur veritatis, facere sed aperiam
+        eos ullam ea? Possimus placeat eos vitae dolores est optio laborum.
+        Mollitia atque repudiandae amet, consectetur nisi rerum adipisci quas,
+        doloremque officiis vero laboriosam, numquam labore voluptatem fuga
+        magni dolorem est cumque. Temporibus doloribus odio neque voluptatum
+        aliquid eligendi in ipsam! Quae temporibus veritatis, doloremque harum
+        excepturi quo ad reiciendis, adipisci doloribus distinctio cumque
+        eaque ab delectus quibusdam deleniti aspernatur rem, non magnam
+        accusantium repellendus? Molestias nostrum aperiam quia repellendus
+        fuga. Harum minima perferendis atque nemo officiis consequuntur in
+        deserunt suscipit provident, sit neque. Voluptates ratione quasi ipsum
+        quidem voluptatum corporis nisi animi vero iusto pariatur, impedit
+        repudiandae quaerat ad in. Temporibus minus nisi incidunt enim
+        reiciendis quisquam ducimus quasi rem, perspiciatis amet libero!
+        Exercitationem et aliquam aspernatur accusamus beatae, illo
+        repudiandae nostrum suscipit voluptatem, reiciendis at a ea pariatur
+        distinctio? Quaerat architecto reiciendis at, labore minus quo in
+        accusantium itaque autem esse. Recusandae, temporibus, quidem
+        necessitatibus rerum ex nam optio repellat deleniti pariatur
+        dignissimos similique nulla. Asperiores, obcaecati. Atque, aliquid?
+        Excepturi, commodi magni repudiandae aspernatur repellendus sunt
+        maiores atque ratione. Quae explicabo quasi, excepturi est magni odit
+        dolore sint facilis vel accusamus culpa cupiditate necessitatibus
+        fugit perferendis. Voluptatibus, architecto error. Nisi illo dicta
+        veniam voluptates quaerat asperiores quia modi obcaecati at. Dolorem
+        quis expedita maiores provident corrupti rerum qui perspiciatis
+        tempore numquam eaque, ad modi, nostrum velit placeat error hic.
+        Eaque, quaerat, labore nam voluptate esse expedita accusantium ad
+        neque obcaecati laborum eum aut tempore earum ipsa, perspiciatis
+        reprehenderit ducimus maxime! Expedita earum error quis doloribus in
+        optio modi delectus. Voluptatibus molestiae maxime mollitia! Sapiente
+        corporis quaerat pariatur facere iure dolorem, ut sit numquam
+        necessitatibus vel nihil, repudiandae dolor? Non dolore eligendi, sit
+        veritatis nostrum expedita adipisci ipsa laudantium in! Deleniti
+        perspiciatis fugit tempora et nesciunt iusto nisi reprehenderit? Quo
+        repellat sunt qui ut facere ea dolore! Labore, pariatur, quidem
+        repellendus repudiandae distinctio voluptas dolores, id ducimus
+        aperiam consequatur dolorum! Dolores repellat est saepe sed laborum
+        neque exercitationem possimus explicabo suscipit tempore repudiandae
+        ex odio animi blanditiis eligendi labore nihil natus quidem, nisi
+        itaque voluptate omnis. Consequuntur cumque accusamus natus. Cumque
+        ad, perferendis eaque accusantium nam dicta fugit maiores quae,
+        numquam laborum nulla consectetur, magnam dolores tempore officiis!
+        Delectus laboriosam debitis ex blanditiis nam velit at quod placeat
+        libero reprehenderit? Ipsum, expedita quas. Possimus tempora sed vel
+        tenetur assumenda veritatis eveniet repellat, quos reiciendis at quam
+        aperiam blanditiis ducimus aut labore rem voluptatem deserunt facilis
+        quo sequi temporibus expedita earum? Ducimus debitis fuga ipsa,
+        fugiat, autem nesciunt natus temporibus a magni facere mollitia
+        aliquam illum id quis maxime deleniti veniam ex modi consequuntur
+        iusto incidunt nemo. Quia magni nulla cumque! Illo nam, quisquam
+        maxime unde fugit aspernatur libero fuga mollitia ullam officiis
+        molestias fugiat quas perferendis tempore magni amet? Velit ipsa rerum
+        explicabo voluptatem sequi tempore dolor hic eos odit. Quia aliquam,
+        commodi dolor assumenda accusantium ea impedit dolorum laudantium
+        voluptate nulla maxime neque sint distinctio hic, accusamus cupiditate
+        corporis placeat culpa porro quasi natus! Facere debitis fugit
+        laboriosam tenetur! Saepe, maiores? Beatae reprehenderit fugiat nobis,
+        omnis iusto soluta nesciunt adipisci repudiandae qui sint veritatis
+        rem, quisquam ex quidem numquam vitae facilis. Assumenda laudantium
+        quisquam dignissimos veniam, harum eaque accusantium. Omnis ipsum
+        blanditiis facilis eveniet ducimus voluptate porro qui sapiente
+        accusantium labore aut, magni, assumenda corrupti in quibusdam
+        necessitatibus culpa impedit voluptatem fugit minima numquam, pariatur
+        aliquid dolorum? Officia, adipisci. Neque nam quos libero praesentium?
+        Eaque aperiam ducimus quidem quas molestias vitae rem, beatae tenetur
+        distinctio perspiciatis! Iure similique laboriosam doloremque cum!
+        Iusto rem quo pariatur nam molestiae doloribus tempore? Odit dolorem
+        molestiae laboriosam magni illum. Velit eligendi aperiam deserunt
+        autem! Provident quibusdam beatae, libero temporibus cumque omnis eum
+        voluptates veritatis officiis perspiciatis, voluptatem nobis enim eos
+        dolorem animi deserunt? Odit sit similique molestiae non architecto
+        quidem adipisci tenetur, enim ea pariatur soluta cum veniam tempora.
+        Eaque totam, impedit quam inventore aperiam adipisci maxime ullam
+        ipsam sapiente expedita quibusdam quasi? Veniam a repellat possimus
+        error laudantium nesciunt, quisquam voluptatibus sed distinctio eum
+        voluptate ratione tempora! Fugit quae, a itaque deserunt velit
+        exercitationem nemo dolores, molestias sed autem qui cum ipsam? Saepe
+        neque nulla adipisci expedita ad provident harum dolores omnis
+        repellat rem eaque eum repudiandae dolore aliquam laboriosam,
+        molestiae cupiditate hic accusamus laborum quos ipsam distinctio sed
+        laudantium. Aut, dolores! Pariatur vitae ex repellat! Totam debitis
+        sequi voluptatum necessitatibus, laboriosam eius provident maxime
+        aliquid voluptate, voluptatibus omnis vel quae eaque saepe.
+        Repudiandae perferendis commodi ipsam, cupiditate dignissimos aut
+        nostrum labore? Alias natus obcaecati eos nesciunt dolorem illum ullam
+        adipisci cupiditate fugiat debitis, quo qui ab quia consequuntur
+        veniam aperiam ipsam rerum quisquam? Fuga, sit saepe! Qui accusamus
+        beatae nobis repudiandae! Doloremque, error voluptatibus. Eligendi
+        illum expedita aliquam placeat rem distinctio, nesciunt ex dolore
+        culpa blanditiis harum laboriosam a est minus quaerat dolorem
+        cupiditate nulla porro sint nisi tenetur! Facere, cupiditate? Eos
+        animi vel neque cumque numquam similique magni. Natus excepturi
+        eligendi cum eaque sed iure quos distinctio atque inventore assumenda?
+        Quos molestias consectetur quia, cupiditate nihil iste iusto at
+        nesciunt! Earum doloremque alias id provident! Dolorem ex praesentium
+        eaque natus sed numquam omnis, iure incidunt nesciunt, sint suscipit
+        dicta quidem ratione voluptas minima. Nulla, dolor totam tempore
+        adipisci incidunt vitae? Non fugit iusto distinctio libero illo porro
+        commodi doloribus enim rem quidem corporis nam voluptatem, incidunt
+        recusandae sunt. Soluta harum itaque laborum ab repellendus in magnam,
+        temporibus commodi beatae vero!
+      </div>
+    </main>
+    <!-- <footer class="">this is footer</footer> -->
+  </section>
+</body>
+<!-- <script type="text/javascript">
+ 
+</script> -->
+
+<script src="./db.js"></script>
+
+</html>

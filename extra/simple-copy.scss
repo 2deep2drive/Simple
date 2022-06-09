@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+@import "./imports/variables";
+
+@mixin set-col($value) {
+    .c-#{$value} {
+        width: $value * 5%;
+        flex: 0 0 auto;
+    }
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    // color: #fff;
+    visibility: visible;
+}
+
+//-------------------------------
+.box,
+.box-fluid,
+.box-lg,
+.box-md,
+.box-sm,
+.box-xl,
+.box-xxl {
+    // background-color: rgb(70, 99, 153);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0.75rem;
+}
+
+.wrapper{
+    // width: 100%;
+    // height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    // padding: 0 1rem;
+}
+.r {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+@for $var from 0 to 20 {
+    @include set-col($var);
+}
+
+@import "./imports/header";
+
+.side-wrapper {
+    position: relative;
+    top: 4rem;
+
+    aside {
+        position: fixed;
+        width: 15rem;
+        // background-color: #F7F5F2 !important;
+        // background-color: #DDDDDD !important;
+
+        background-color: #EEEEEE !important;
+        // background-color: #F4F4F2 !important;
+        // background-color: #E8E8E8 !important;
+        // background-color: #F6F5F5 !important;
+        // background-color: #E0DEDE !important;
+        // background-color: #E3E3E3 !important;
+        height: calc(#{$full-h} - #{$nav-h});
+        // height: 100%;
+        overflow-y: auto;
+        background-color: $color-0;
+
+        ul {
+            padding: 1rem 1.5rem;
+            list-style: none;
+
+            li {
+                padding: 0.25rem 1rem;
+
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 0.25rem 0.5rem;
+                    border-radius: 0.5rem;
+                    font-size: .9rem;
+                    font-weight: 500;
+                    color: rgba(22, 18, 18, 0.815);
+                }
+
+                a:hover {
+                    background-color: #fff;
+                }
+            }
+
+            li.small {
+                // border: 1px solid red;
+                display: flex;
+                padding: 2rem 0 0 0;
+                justify-content: space-between;
+
+                a {
+                    padding: 0;
+                    // border: 1px solid red;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+            }
+
+            h4 {
+                a {
+
+                    text-decoration: none;
+                    padding: .5rem .25rem;
+                    cursor: default;
+                    color: rgb(22, 18, 18);
+                    font-weight: 600;
+                    font-size: .95rem;
+                }
+            }
+        }
+
+
+    }
+
+    main {
+        background-color: #f5f5f5 !important;
+        width: calc(#{$full-w} - #{$aside-w});
+        position: absolute;
+        left: 15rem;
+        min-height: 200vh;
+
+        // .bucket {
+
+        .xxx {
+
+            border: 1px solid red;
+        }
+
+        // }
+
+        // #navigation {
+        .bucket {
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: .5rem;
+            background-color: #dedede;
+
+            .quotes {
+                color: #28282B;
+                // background-color: #fff;
+                // min-height: 2rem;
+                margin: 1rem 0;
+                padding: 0 .5rem;
+                // border-radius: .5rem;
+                border-left: 5px solid #28282B;
+            }
+
+            .result {
+                min-height: 1rem;
+                // border: 1px dotted green;
+
+            }
+
+            .code {
+                // border: 1px dotted green;
+                padding: none;
+
+                .resultCode {
+                    font-family: monospace;
+                    font-size: 1rem;
+                    overflow-y: auto;
+                    border-radius: .5rem;
+                    color: #f8f8f8;
+                    background-color: #28282B;
+
+
+                }
+
+            }
+        }
+
+        // }
+    }
+}
+
+
+
+// -------------------------------------------
+
+// --------------- bucket-navigation
+
+// --------------- bucket-components
+.card {
+    position: relative;
+    // height: 24rem;
+    min-height: 24rem;
+    // width: 16rem;
+    // min-width: 16rem;
+    border-radius: .5rem;
+    background-color: #fff;
+    // display: flex;
+    // flex-direction: column;
+
+
+
+    .card-body {
+        // min-height: 60%;
+        padding: .5rem;
+    }
+
+}
+
+
+// -------------------------------------------
+.iBox {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    padding: .3rem .2rem;
+    font-size: .92rem;
+    font-weight: 600
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="number"] {
+    margin: .5rem 0;
+    // width: 100%;
+    height: 2.8rem;
+    display: block;
+    padding: 0 1rem;
+    border-radius: .3rem;
+    font-size: .9rem;
+    font-weight: 500;
+    color: #343435;
+    letter-spacing: .02rem;
+    border: none;
+    background-color: #F1F1F1;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus
+ {
+    background-color: #F1F1F1;
+    border-radius: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+
+::placeholder {
+    font-size: .9rem;
+    font-weight: 600
+}
+
+/* hide arrows
+ Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield !important;
+}
+
+// 
+
+
+input[type="file"] {
+    margin: .5rem 0;
+    // width: 100%;
+    height: 2.8rem;
+    display: block;
+    padding: 0 1rem;
+    border-radius: .3rem;
+    font-size: .9rem;
+    font-weight: 500;
+    color: #343435;
+    letter-spacing: .02rem;
+    border: none;
+    background-color: #F1F1F1;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+// 
+.error {
+    color: red;
+    padding: 0 .3rem;
+    font-size: .82rem;
+    font-weight: 500;
+    letter-spacing: .01rem;
+}
+
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    width: 100%;
+    background-color: #F1F1F1;
+    border-radius: .3rem;
+    margin: 1rem 0;
+    border: none;
+    height: 3rem;
+    font-size: .95rem;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+
+    background-color: #000;
+    color: #FFF;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+//------------------
+
+
+/* Estrutura */
+// .input-container {
+//     position: relative;
+//     input {
+//         border: 0;
+//         border-bottom: 2px solid #9e9e9e;
+//         outline: none;
+//         transition: .2s ease-in-out;
+//         box-sizing: border-box;
+//       }
+
+//       label {
+//         top: 0;
+//         left: 0; right: 0;
+//         color: #616161;
+//         display: flex;
+//         align-items: center;
+//         position: absolute;
+//         font-size: 1rem;
+//         cursor: text;
+//         transition: .2s ease-in-out;
+//         box-sizing: border-box;
+//       }
+
+//       input,
+//       label {
+//         width: 100%;
+//         height: 3rem;
+//         font-size: 1rem;
+//       }
+
+//       input:valid,
+//       input:focus {
+//         border-bottom: 2px solid #26a69a;  
+//       }
+
+//       input:valid + label,
+//       input:focus + label {
+//         color: #26a69a;
+//         font-size: .8rem;
+//         top: -30px;
+//         pointer-events: none;
+//       }
+
+//   }
+
+
+
+
+
+
+
+//---------------------------------------------
+
+@import "./imports/display";
+@import "./imports/position";
+@import './imports/alignment';
+@import "./imports/width";
+@import "./imports/padding";
+@import "./imports/margin";
+@import "./imports/border";
+@import "./imports/breakpoints";

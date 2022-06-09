@@ -1,0 +1,287 @@
+@import '../imports/variables';
+
+@mixin set-col($value) {
+
+    .c-#{$value} {
+        width: $value * 5%;
+        flex: 0 0 auto;
+    }
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.box {
+    background-color: bisque;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.wrapper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.r {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+
+.c {
+    display: flex;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav,
+nav>.r,
+nav>.r .nav-items {
+
+    height: 3.5rem;
+}
+
+main {
+    height: 300px;
+}
+
+.nav-items>ul {
+
+    height: inherit;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vCenter {
+    display: flex;
+    align-items: center;
+}
+
+a:hover {
+    color: red;
+}
+
+
+// ---------------------
+#nav-container {
+    // position: fixed;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    pointer-events: none;
+    left: 0;
+
+    * {
+        visibility: visible;
+    }
+
+    .bg {
+        position: absolute;
+        top: 3.5rem;
+        // left: 0;
+        width: 100%;
+        height: calc(100% - 60px);
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s;
+        background: #000;
+    }
+
+    &:focus-within .bg {
+        visibility: visible;
+        opacity: .6;
+    }
+
+    .burger {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
+        left: 5%;
+        -webkit-appearance: none;
+        background: transparent;
+        border-radius: 0;
+        height: 3.5em;
+        width: 30px;
+        cursor: pointer;
+        pointer-events: auto;
+        // margin-left: 25px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+        .icon-bar {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: rgb(53, 168, 42);
+            transition: .3s;
+        }
+
+        .icon-bar+.icon-bar {
+            margin-top: 5px;
+        }
+    }
+
+    &:focus-within .burger {
+        pointer-events: none;
+    }
+
+    &:focus-within .icon-bar:nth-of-type(1) {
+        transform: translate3d(0, 8px, 0) rotate(45deg);
+    }
+
+    &:focus-within .icon-bar:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    &:focus-within .icon-bar:nth-of-type(3) {
+        transform: translate3d(0, -8px, 0) rotate(-45deg);
+    }
+
+    #nav-content {
+        // margin-top: 70px;
+        padding: 20px;
+        width: 100%;    
+        max-width: 300px;
+        position: absolute;
+        top: 3.5rem;
+        left: 0;
+        // height: calc(100% - 70px);
+        height:100px;
+        background: #ececec;
+        pointer-events: auto;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        transform: translateX(-100%);
+        transition: transform .3s;
+        will-change: transform;
+        contain: paint;
+    }
+
+    &:focus-within #nav-content {
+        transform:none;
+    }
+}
+
+main{
+    position: relative;
+    top: 60px;
+}
+
+
+
+// #nav-content ul {
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// #nav-content li a {
+//     padding: 10px 5px;
+//     display: block;
+//     text-transform: uppercase;
+//     transition: color .1s;
+// }
+
+// #nav-content li a:hover {
+//     color: #BF7497;
+// }
+
+// #nav-content li:not(.small)+.small {
+//     margin-top: auto;
+// }
+
+// .small {
+//     display: flex;
+//     align-self: center;
+// }
+
+// .small a {
+//     font-size: 12px;
+//     font-weight: 400;
+//     color: #888;
+// }
+
+// .small a+a {
+//     margin-left: 15px;
+// }
+
+// #nav-container:focus-within #nav-content {
+//     transform: none;
+// }
+
+// * {
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+// }
+
+// html,
+// body {
+//     height: 100%;
+// }
+
+// a,
+// a:visited,
+// a:focus,
+// a:active,
+// a:link {
+//     text-decoration: none;
+//     outline: 0;
+// }
+
+// a {
+//     color: currentColor;
+//     transition: .2s ease-in-out;
+// }
+
+
+
+// --------------------------------------------------------
+
+
+
+
+//---------------------------------------------
+@include set-col(1);
+@include set-col(2);
+@include set-col(3);
+@include set-col(4);
+@include set-col(5);
+@include set-col(6);
+@include set-col(7);
+@include set-col(8);
+@include set-col(9);
+@include set-col(10);
+@include set-col(11);
+@include set-col(12);
+@include set-col(13);
+@include set-col(14);
+@include set-col(15);
+@include set-col(16);
+@include set-col(17);
+@include set-col(18);
+@include set-col(19);
+@include set-col(20);
+
+@import '../imports/display';
+@import '../imports/alignment';
+@import '../imports/width';
+@import '../imports/padding';
+@import '../imports/margin';
+@import '../imports/border';
+@import '../imports/breakpoints';
